@@ -88,8 +88,9 @@ fun LoginForm() {
     var password: String by remember { mutableStateOf("") }
     var showKey by remember { mutableStateOf(false) }
     var message by remember { mutableStateOf("please login") }
-
-    val success = ((username == "HuYiming")&&(password == "123456"))
+    val ownname = "c3huyi00@students.oamk.fi"
+    val ownkey = "123456"
+    val success = ((username == ownname)&&(password == ownkey))
 
     Column() {
         Text(
