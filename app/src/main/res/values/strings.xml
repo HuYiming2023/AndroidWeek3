@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="message">"Login "</string>
+    <string name="item">Week 3</string>
+    <string name="author">Hu Yiming</string>
+    <string name="height">Height(m)</string>
+    <string name="weight">Weight(kg)</string>
+    <string name="head">Login</string>
+</resources>
