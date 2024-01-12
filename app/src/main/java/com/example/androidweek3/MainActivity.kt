@@ -25,12 +25,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.androidweek3.ui.theme.AndroidWeek3Theme
-import android.widget.Toast
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.text.KeyboardActions
-import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Person
@@ -40,22 +34,11 @@ import androidx.compose.material.icons.outlined.VisibilityOff
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.ExperimentalComposeUiApi
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalFocusManager
-import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
-import androidx.compose.ui.unit.dp
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.TextField
 import androidx.compose.ui.text.input.KeyboardCapitalization
-import androidx.constraintlayout.compose.Visibility
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -75,24 +58,16 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Composable
 fun LoginForm() {
     var username: String by remember { mutableStateOf("") }
     var password: String by remember { mutableStateOf("") }
     var showKey by remember { mutableStateOf(false) }
     var message by remember { mutableStateOf("please login") }
-    val ownname = "c3huyi00@students.oamk.fi"
-    val ownkey = "123456"
-    val success = ((username == ownname)&&(password == ownkey))
+    val ownName = "c3huyi00@students.oamk.fi"
+    val ownKey = "123456"
+    val success = ((username == ownName)&&(password == ownKey))
 
-    Column() {
+    Column {
         Text(
             text = stringResource(R.string.author),
             fontSize = 24.sp,
